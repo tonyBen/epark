@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.junit.runner.Request;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/")
-public class UserController {
+public class UserControllerImpl {
     
-    private static final Logger log = Logger.getLogger(UserController.class);
+    private static final Logger log = Logger.getLogger(UserControllerImpl.class);
 
     @RequestMapping("/hello")
     public String hello(){        
