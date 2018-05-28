@@ -23,7 +23,7 @@
         <init-param>
             <description>spring mvc properties</description>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:springmvc.xml</param-value>
+            <param-value>classpath:springmvc.xml,classpath:spring-mybatis.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
