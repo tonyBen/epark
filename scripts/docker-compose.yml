@@ -1,0 +1,27 @@
+version: '2'
+services:
+    postgres:
+        image: postgres:9.6
+        ports:
+            - "5432:5432"
+        environment:
+            - "POSTGRES_PASSWORD:postgres"
+        volumes:
+            - ./postgres/data:/var/lib/postgresql/data
+        networks:
+            - epark
+    tomcat:
+        build:
+            context: tomcat/
+        volumes:
+            - ./tomcat/webapp:/var/tmp/tomcat/apache-tomcat-8.5.8/webapps
+            - ./tomcat/logs:/var/tmp/tomcat/apache-tomcat-8.5.8/logs
+        ports:
+            - "8080:8080"
+        networks:
+            - epark
+        depends_on:
+            - postgres
+networks:
+    epark:
+        driver: bridge
