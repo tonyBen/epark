@@ -1,6 +1,6 @@
 # epark
-Install Guide:
-a) down load code wget https://github.com/tonyBen/epark/archive/master.zip
-b) unzip master.zip 
-c) cd epark-master/scripts
-d) sh install.sh
+## Install Guide:
+* down load code wget https://github.com/tonyBen/epark/archive/master.zip
+* unzip master.zip 
+* cd epark-master/scripts
+* sh install.sh
