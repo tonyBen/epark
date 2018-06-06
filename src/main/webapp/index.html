@@ -1,191 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-	<head>
-	<title>支付宝当面付DEMO</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style>
-*{
-	margin:0;
-	padding:0;
-}
-ul,ol{
-	list-style:none;
-}
-.title{
-    color: #ADADAD;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 8px 16px 5px 10px;
-}
-.hidden{
-	display:none;
-}
+    <head>
 
-.new-btn-login-sp{
-	border:1px solid #D74C00;
-	padding:1px;
-	display:inline-block;
-}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>智能停车管理系统</title>
 
-.new-btn-login{
-    background-color: transparent;
-    background-image: url("images/new-btn-fixed.png");
-    border: medium none;
-}
-.new-btn-login{
-    background-position: 0 -198px;
-    width: 82px;
-	color: #FFFFFF;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    padding: 0 10px 3px;
-}
-.new-btn-login:hover{
-	background-position: 0 -167px;
-	width: 82px;
-	color: #FFFFFF;
-    font-weight: bold;
-    height: 28px;
-    line-height: 28px;
-    padding: 0 10px 3px;
-}
-.bank-list{
-	overflow:hidden;
-	margin-top:5px;
-}
-.bank-list li{
-	float:left;
-	width:153px;
-	margin-bottom:5px;
-}
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
-#main{
-	width:750px;
-	margin:0 auto;
-	font-size:14px;
-	font-family:'宋体';
-}
-#logo{
-	background-color: transparent;
-    background-image: url("images/new-btn-fixed.png");
-    border: medium none;
-	background-position:0 0;
-	width:166px;
-	height:35px;
-    float:left;
-}
-.red-star{
-	color:#f00;
-	width:10px;
-	display:inline-block;
-}
-.null-star{
-	color:#fff;
-}
-.content{
-	margin-top:5px;
-}
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="assets/js/html5shiv.js"></script>
+            <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
 
-.content dt{
-	width:160px;
-	display:inline-block;
-	text-align:right;
-	float:left;
-	
-}
-.content dd{
-	margin-left:100px;
-	margin-bottom:5px;
-}
-#foot{
-	margin-top:10px;
-}
-.foot-ul li {
-	text-align:center;
-}
-.note-help {
-    color: #999999;
-    font-size: 12px;
-    line-height: 130%;
-    padding-left: 3px;
-}
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+		<script>
+			$(function(){
+				
+			})
+		</script>
+    </head>
 
-.cashier-nav {
-    font-size: 14px;
-    margin: 15px 0 10px;
-    text-align: left;
-    height:30px;
-    border-bottom:solid 2px #CFD2D7;
-}
-.cashier-nav ol li {
-    float: left;
-}
-.cashier-nav li.current {
-    color: #AB4400;
-    font-weight: bold;
-}
-.cashier-nav li.last {
-    clear:right;
-}
-.alipay_link {
-    text-align:right;
-}
-.alipay_link a:link{
-    text-decoration:none;
-    color:#8D8D8D;
-}
-.alipay_link a:visited{
-    text-decoration:none;
-    color:#8D8D8D;
-}
-</style>
-</head>
-<body text=#000000 bgColor="#ffffff" leftMargin=0 topMargin=4>
-	<div id="main">
-		<div id="head">
-            <dl class="alipay_link">
-                <a target="_blank" href="http://www.alipay.com/"><span>支付宝首页</span></a>|
-                <a target="_blank" href="https://b.alipay.com/home.htm"><span>商家服务</span></a>|
-                <a target="_blank" href="http://help.alipay.com/support/index_sh.htm"><span>帮助中心</span></a>
-            </dl>
-            <span class="title"></span>
-		</div>
-        
-        
-            <div id="body" style="clear:left">
-                <dl class="content">
-					<dt></dt>
-					<dd>
-						<a target="_blank" href="trade_pay.jsp"><span>当面付2.0  条码支付</span></a>
-					</dd>
-					
-					<dt></dt>
-					<dd>
-						<a target="_blank" href="trade_precreate.jsp"><span>当面付2.0  二维码支付</span></a>
-					</dd>
-					
-					<dt></dt>
-					<dd>
-						<a target="_blank" href="./trade_query.jsp"><span>当面付2.0  订单查询</span></a>						
-					</dd>
-					
-					<dt></dt>
-					<dd>
-						<a target="_blank" href="./trade_refund.jsp"><span>当面付2.0  订单退款</span></a>						
-					</dd>
-                </dl>
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>后台数据管理中心</strong></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>登陆</h3>
+                            		<p>输入手机号码和密码登录</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-key"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form" action="" method="post" class="login-form">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-username">手机号码</label>
+			                        	<input type="text" name="form-username" placeholder="手机号码..." class="form-username form-control" id="form-username">
+			                        </div>
+			                        <div class="form-group">
+			                        	<label class="sr-only" for="form-password">密码</label>
+			                        	<input type="password" name="form-password" placeholder="密码..." class="form-password form-control" id="form-password">
+			                        </div>
+			                        <button type="submit" class="btn">登陆!</button>
+			                    </form>
+		                    </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
+            
+        </div>
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
 
-        <div id="foot">
-			<ul class="foot-ul">
-				<li><font class="note-help"> </font></li>
-				<li>
-					支付宝版权所有 2011-2015 ALIPAY.COM 
-				</li>
-			</ul>
-		</div>
-	</div>
-</body>
+    </body>
+
 </html>
