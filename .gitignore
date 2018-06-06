@@ -12,8 +12,12 @@ build/
 .classpath
 .project
 scripts/apache*
+scripts/java*
 scripts/jdk*
 scripts/postgres/*
 *.gz
+scripts/tomcat/web*/*
+scripts/tomcat/logs*/*
+scripts/zfbinfo.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar

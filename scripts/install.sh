@@ -85,6 +85,7 @@ init_database()
 
 package()
 {
+   yes|cp $baseDir/zfbinfo.properties ../src/main/resources/zfbinfo.properties
    cd ../ >/dev/null
    mvn clean package
    cd - >/dev/null
