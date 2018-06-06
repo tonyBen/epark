@@ -97,6 +97,7 @@ deploy()
 {
    mkdir -p $baseDir/tomcat/webapp
    mkdir -p $baseDir/tomcat/logs
+   rm -rf  $baseDir/tomcat/webapp/epark*
    mv ../target/epark-*-SNAPSHOT.war $baseDir/tomcat/webapp/epark.war
    chmod -R 777 $baseDir/tomcat/webapp
    docker-compose down

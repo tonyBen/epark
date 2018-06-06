@@ -1,1 +1,1 @@
-<% response.sendRedirect("epark/index.html"); %>
+<% response.sendRedirect("epark/home/"); %>

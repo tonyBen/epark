@@ -26,7 +26,9 @@
     <!-- 使用默认的Servlet来响应静态文件 -->
     <mvc:default-servlet-handler />
 
-
+	<mvc:view-controller path="/" view-name="forward:home"/>  
+	<mvc:resources location="/WEB-INF/assets/" mapping="/assets/**" />  
+    <mvc:resources location="/WEB-INF/images/" mapping="/images/**" />  
     <!-- 视图解析器 -->
     <bean id="viewResolver"
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">
