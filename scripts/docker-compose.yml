@@ -13,6 +13,8 @@ services:
     tomcat:
         build:
             context: tomcat/
+        environment:
+            - "DB:postgres"
         volumes:
             - ./tomcat/webapp:/var/tmp/tomcat/apache-tomcat-8.5.8/webapps
             - ./tomcat/logs:/var/tmp/tomcat/apache-tomcat-8.5.8/logs

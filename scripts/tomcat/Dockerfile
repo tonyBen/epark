@@ -13,7 +13,7 @@ RUN cd /tmp && tar -xzf jdk-8u171-linux-x64.tar.gz -C /var/tmp/jdk && rm -rf /va
 #RUN cd /tmp && cp epark.war /var/tmp/tomcat/apache-tomcat-8.5.8/webapps/epark.war 
 RUN rm -rf /tmp/*
 
-
+ENV DATABASE $DB
 ENV JAVA_HOME /var/tmp/jdk/jdk1.8.0_171
 ENV CATALINA_HOME /var/tmp/tomcat/apache-tomcat-8.5.8
 ENV PATH $PATH:$JAVA_HOME/bin:$CATALINA_HOME/bin
